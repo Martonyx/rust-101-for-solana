@@ -1,3 +1,5 @@
+
+
 fn main() {
     // unsigned integer
     // u8, u16, u32, u64, u128
@@ -93,4 +95,133 @@ fn main() {
     for (index, value) in array.iter().enumerate() {
         println!("Value at index {}: {}", index, value);
     }
+
+    // Functions
+
+    // 1. Defining a function
+    fn print_greeting() {
+
+        println!("Hello, world!");
+        
+        }
+        
+        // Call the function
+        
+        print_greeting();
+    //    2. Defining a function with a single parameter:
+
+    fn print_number(n: i32) {
+
+        println!("The number is {}", n);
+        
+        }
+        
+        // Call the function
+        
+        print_number(5);
+
+    // 3. Defining a function with multiple parameters:
+
+    fn print_numbers(x: i32, y: i32) {
+
+        println!("The numbers are {} and {}", x, y);
+        
+        }
+        
+        // Call the function
+        
+        print_numbers(5, 10);
+    
+    //    3. Defining a function with a return type:
+
+    fn add(x: i32, y: i32) -> i32 {
+
+        x + y // No semicolon since it is a return expression
+        
+        }
+        
+        // Call the function
+        
+        let sum = add(5, 10);
+        
+        println!("The sum is {}", sum);
+
+//4. Defining a function with a return type and explicit return statement:
+
+fn subtract(x: i32, y: i32) -> i32 {
+
+    return x - y;
+    
+    }
+    
+    // Call the function
+    
+    let difference = subtract(10, 5);
+    
+    println!("The difference is {}", difference);
+
+
+
+
+
+    //Implementation
+
+    //1. Basic Implementation:
+
+    struct Rectangle { width: u32, height: u32,
+
+    }
+    
+    impl Rectangle { fn area(&self) -> u32 { self.width * self.height }
+    
+    }
+    
+    let rect = Rectangle { width: 30, height: 50 };
+    
+    println!("The area of the rectangle is {}", rect.area());
+
+
+    // 2. Implementation with more than one method:
+
+    struct Circle {
+
+        radius: f64,
+    
+    }
+    
+    impl Circle {
+    
+        fn area(&self) -> f64 {
+    
+            3.14 * (self.radius * self.radius)
+    
+        }
+    
+        fn perimeter(&self) -> f64 {
+    
+            2.0 * 3.14 * self.radius
+    
+        }
+    
+    }
+    
+    let circle = Circle { radius: 10.0 };
+    
+    println!("The area of the circle is {}", circle.area());
+    
+    println!("The perimeter of the circle is {}", circle.perimeter());
+
+    //3. impl can also be used for implementing traits, which are defined using the trait keyword.
+
+    trait HasArea { fn area(&self) -> f64;
+
+    }
+
+    struct Square { side: f64,
+
+    }
+
+    impl HasArea for Square { fn area(&self) -> f64 { self.side * self.side }
+
+    } 
 }

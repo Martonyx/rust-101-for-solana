@@ -37,4 +37,7 @@ All files within this repository are licensed under the MIT License unless expli
 
 100% Open Source software.
 
+## solona wallet Address
+54z8EGypzUMKeUo5GmEp7itcMzoxk3cxFnoN8P7uzU68
+
 © 2023 [Calyptus] - See [LICENSE](https://opensource.org/license/mit/) for details.
